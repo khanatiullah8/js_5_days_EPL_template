@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"> 
+<head>
+  <meta charset="utf-8">
+  <title>Login Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" />
+  <!--font-awesome link for icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
+  <link rel="stylesheet" media="screen" href="assets/css/style.css" >
+</head>
+<body class="loginBody">
+  <!--container start-->
+  <div class="container">
+    <!--main section start-->
+    <main>
+      <!-- login-register section start -->
+      <div class="login-register">
+        <div class="wrapper">
+          <div class="form-cards">
+            <div class="login-card">
+              <h2>login</h2>
+              <span class="new-user-alert">It seems you are new user, please Sign Up first</span>
+              <form action="#FIXME" method="post" name="formLogin" class="form-login">
+                <div class="input-group">
+                  <label for="loginEmail">email id</label>
+                  <input type="email" name="loginEmail" id="loginEmail" placeholder="yourname@prdxn.com" autocomplete="off">
+                  <span class="errorAlert">email do not match</span>
+                </div>
+                <div class="input-group">
+                  <label for="loginPassword">password</label>
+                  <input type="password" name="loginPassword" id="loginPassword" placeholder="enter password" autocomplete="off">
+                  <span class="errorAlert">password do not match</span>
+                </div>
+                <div class="input-control">
+                  <input type="submit" value="login">
+                </div>
+              </form>
+              <p>don't have an account? click to <span class="span-signup">sign up</span></p>
+            </div>
+            <div class="signup-card">
+              <h2>sign up</h2>
+              <span class="signup-success-alert">Registration Successful!</span>
+              <form action="#FIXME" method="post" name="formSignup" class="form-signup">
+                <div class="input-group">
+                  <label for="yourName">name</label>
+                  <input type="text" name="yourName" id="yourName" placeholder="enter your name" autocomplete="off">
+                  <span class="errorAlert">enter alphabets only</span>
+                </div>
+                <div class="input-group">
+                  <label for="signupEmail">email id</label>
+                  <input type="email" name="signupEmail" id="signupEmail" placeholder="yourname@axioned.com" autocomplete="off">
+                  <span class="errorAlert">enter valid email (eg: yourname@axioned.com)</span>
+                </div>
+                <div class="input-group">
+                  <label for="signupPassword">password</label>
+                  <input type="password" name="signupPassword" id="signupPassword" placeholder="set password" autocomplete="off">
+                  <span class="errorAlert">atleast 1 speacial character, 1 capital, 1 small, 1 number &amp; length count between 5 to 10</span>
+                </div>
+                <div class="input-control">
+                  <input type="submit" value="sign up">
+                </div>
+              </form>
+              <p>already have an account? click to <span class="span-login">login</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- login-register section end -->
+    </main>
+    <!--main section end-->
+  </div>
+  <!--container end-->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

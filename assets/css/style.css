@@ -1,0 +1,1202 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+  -webkit-transition: all .3s; 
+  -o-transition: all .3s; 
+  transition: all .3s;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+span { display: inline-block; }
+
+input[type],
+select {
+  border: none;
+  outline: none;
+}
+
+p { line-height: 1.5; }
+
+.section-heading {
+  color: #2c3e50;
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+::-moz-selection {
+  background-color: #fff;
+  color: #37053c;
+}
+
+::selection {
+  background-color: #fff;
+  color: #37053c;
+}
+
+html.overflow-hidden { overflow: hidden; }
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1366px;
+  width: 86%; 
+  margin: 0 auto;
+}
+/*=================================
+  Header styling starts here
+=================================*/
+
+header .wrapper {
+  width: 100%;
+  padding: 12px 7%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+header .logo {
+  width: 120px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  mix-blend-mode: multiply;
+}
+
+.menu-toggle {
+  width: 30px;
+  height: 30px;
+  display: none;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  background-color: #2c3e50;
+  text-indent: -99999px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.bar-one {
+  top: 0;
+  -webkit-box-shadow: 0 13px 0 #2c3e50;
+  box-shadow: 0 13px 0 #2c3e50;
+}
+
+.bar-two { bottom: 0; }
+
+.bar-one.active {
+  top: 50%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  -ms-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.bar-two.active {
+  bottom: 50%;
+  -webkit-transform: translateY(50%) rotate(-45deg);
+  -ms-transform: translateY(50%) rotate(-45deg);
+  transform: translateY(50%) rotate(-45deg);
+}
+
+.nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 50px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.nav-menu a {
+  padding: 7px;
+  border-radius: 5px;
+  color: #5c1e84;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.nav-menu a.active { -webkit-box-shadow: 0 0 5px #5c1e84; box-shadow: 0 0 5px #5c1e84; }
+
+.logout-button a {
+  padding: 7px 12px;
+  border-radius: 5px;
+  background-color: #5c1e84;
+  color: #fff;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/*=================================
+  Header styling ends here
+=================================*/  
+
+/*=================================
+  main styling starts here
+=================================*/
+
+/* "index.html" styling starts here */
+
+/* banner section starts here */
+
+.banner .wrapper {
+  width: 100%;
+  height: 92vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.banner-slider {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.banner-slider-list {
+  height: 100%;
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+}
+
+.banner-slider-list img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.slider-control {
+  width: 92%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.slider-control .control {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  background-color: rgba(0,0,0,0.5);
+  cursor: pointer;
+  text-indent: -99999px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.visibility-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.slider-control .control::before {
+  content: '';
+  width: 50%;
+  height: 50%;
+  border-bottom: 3px solid #fff;
+  border-left: 3px solid #fff;
+  border-radius: 7px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: transparent;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.slider-control .control:first-child::before {
+  -webkit-transform: translate(-40%, -50%) rotate(45deg);
+  -ms-transform: translate(-40%, -50%) rotate(45deg);
+  transform: translate(-40%, -50%) rotate(45deg);
+} 
+
+.slider-control .control:last-child::before {
+  -webkit-transform: translate(-60%, -50%) rotate(-135deg);
+  -ms-transform: translate(-60%, -50%) rotate(-135deg);
+  transform: translate(-60%, -50%) rotate(-135deg);
+}
+
+/* banner section ends here */
+
+/* about-league section starts here */
+
+.about-league .wrapper {
+  padding: 60px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.league-info,
+.league-history {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  color: #2c3e50;
+  gap: 30px;
+}
+
+.about-league p::first-letter { text-transform: uppercase; }
+
+/* about-league section ends here */
+
+/* "index.html" styling ends here */
+
+/* ************************************** */
+
+/* "clublist.html" & "matchdetails.html" styling starts here */
+
+/* banner section starts here */
+
+.banner-figure,
+.banner-figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-figure img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+/* banner section ends here */
+
+/* club-summary section starts here */
+
+.club-summary .wrapper,
+.match-details .wrapper {
+  min-height: 80vh;
+  padding: 60px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.club-summary .input-group,
+.match-details .input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+  text-transform: capitalize;
+}
+
+.club-summary .input-group label,
+.match-details .input-group label {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.club-summary .input-group select,
+.match-details .input-group select {
+  padding: 10px;
+  background-color: #37053c;
+  color: #7f8c8d;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.club-summary .input-group select::-webkit-scrollbar,
+.match-details .input-group select::-webkit-scrollbar {
+  width: 0;
+  overflow: hidden;
+}
+
+.club-summary-list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.club-summary-list li {
+  padding: 10px 0;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 7px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-transform: capitalize;
+}
+
+.match-date {
+  color: #222;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  font-size: 24px;
+}
+
+.team-summary {
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: -webkit-gradient(linear, left top, right top, from(#8927cc), to(#5c1e84));
+  background: -o-linear-gradient(left, #8927cc, #5c1e84);
+  background: linear-gradient(to right, #8927cc, #5c1e84);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.team-one-summary,
+.team-two-summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-preferred-size: 48%;
+  flex-basis: 48%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.team-one-summary { border-right: 2px solid #fff; }
+
+.team-summary h4 {
+  color: #fff;
+  font-size: 20px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.match-details h4 { cursor: pointer; }
+
+.team-summary span {
+  padding: 0 10px;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.show-more-button { display: none; }
+.show-more-button.active { display: block; }
+
+.show-more-button a {
+  padding: 12px 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  -webkit-box-shadow: 0 0 5px #5c1e84;
+  box-shadow: 0 0 5px #5c1e84;
+  color: #5c1e84;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.show-more-button a::before {
+  content: '';
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #5c1e84;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+/* club-summary section ends here */
+
+/* epl-clubs-all section starts here */
+
+.epl-clubs-all .wrapper {
+  width: 100%;
+  padding: 12px 7%;
+  border-top: 4px solid #37053c;
+}
+
+/* epl-clubs-all section ends here */
+
+/* "clublist.html" & "matchdetails.html" styling ends here */
+
+/* ************************************** */
+
+/* "login.html" styling starts here */
+
+.login-register .wrapper {
+  width: 100%;
+  max-height: 100vh;
+  height: 100vh;
+  padding: 95px 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  background: url('../images/logo.svg') no-repeat top center;
+  background-color: #fff;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.form-cards {
+  min-width: 360px;
+  width: 30%;
+  position: relative;
+  -webkit-perspective: 1500px;
+  perspective: 1500px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.login-card,
+.signup-card {
+  width: 100%;
+  padding: 20px 10px;
+  border-radius: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 15px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  -webkit-box-shadow: 3px 3px 10px #222;
+  box-shadow: 3px 3px 10px #222;
+}
+
+.login-card {
+  background-color: #37053c;
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  visibility: visible;
+}
+
+.login-card.active {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  visibility: hidden;
+}
+
+.signup-card {
+  background-color: #5c1e84;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  visibility: hidden;
+}
+
+.signup-card.active {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  visibility: visible;
+}
+
+.form-cards .new-user-alert,
+.form-cards .signup-success-alert {
+  -webkit-filter: drop-shadow(0 0 5px #000);
+  filter: drop-shadow(0 0 5px #000);
+  font-size: 14px;
+  opacity: 0;
+  text-align: center;
+  visibility: hidden;
+}
+
+.form-cards .new-user-alert { color: #c0392b; }
+.form-cards .signup-success-alert { color: #fff; }
+
+.form-cards .new-user-alert.active,
+.form-cards .signup-success-alert.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.form-cards h2 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.form-cards form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-cards .input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-cards .input-group label {
+  color: #fff;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.form-cards .input-group input {
+  padding: 10px;
+  border-radius: 5px;
+  color: #222;
+  font-size: 15px;
+}
+
+.login-card .input-group input { background-color: #fff; }
+.signup-card .input-group input { background-color: #fff; }
+.form-cards .input-group input::-webkit-input-placeholder { color: #2c3e50; }
+.form-cards .input-group input::-moz-placeholder { color: #2c3e50; }
+.form-cards .input-group input:-ms-input-placeholder { color: #2c3e50; }
+.form-cards .input-group input::-ms-input-placeholder { color: #2c3e50; }
+.form-cards .input-group input::placeholder { color: #2c3e50; }
+.form-cards .input-control { text-align: center; }
+
+.form-cards .input-control input {
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #2c3e50;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.form-cards .errorAlert {
+  color: #c0392b;
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 0;
+  text-shadow: 0 1px 1px #000;
+  visibility: hidden;
+}
+
+.form-cards .errorAlert.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.form-cards .errorAlert::before { content: '* '; }
+
+.form-cards p {
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.form-cards p::first-letter { text-transform: capitalize; }
+
+.form-cards p span {
+  color: #ccc;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* "login.html" styling ends here */
+
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+
+footer .wrapper {
+  width: 100%;
+  padding: 20px 7%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #37053c;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-transform: capitalize;
+}
+
+footer .wrapper > * {  padding: 20px 0; }
+
+.footer-logo {
+  width: 150px;
+  mix-blend-mode: hard-light;
+}
+
+.footer-nav-menu,
+.footer-social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.footer-nav-menu a { color: #fff; }
+
+.footer-social-list a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  color: #fff;
+  font-size: 26px;
+  text-indent: -99999px;
+}
+
+.footer-social-list a::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: 'fontAwesome';
+  text-indent: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.footer-social-list li:nth-child(1) a::before { content: '\f09a'; }
+.footer-social-list li:nth-child(2) a::before { content: '\f16d'; }
+.footer-social-list li:nth-child(3) a::before { content: '\f16a'; }
+.footer-social-list li:nth-child(4) a::before { content: '\f099'; }
+.footer-copyright span { color: #fff; }
+
+ /*=================================
+  footer styling ends here
+=================================*/ 
+
+/*media query starts*/
+/*media query for min-width: 1024px starts here*/
+@media only screen and (min-width: 1024px) {
+
+  .nav-menu a:hover {
+    -webkit-box-shadow: 0 0 5px #5c1e84;
+    box-shadow: 0 0 5px #5c1e84;
+  }
+
+  .logout-button a:hover { background-color: #8927cc; }
+  .show-more-button a:hover { color: #fff; }
+
+  .show-more-button a:hover::before {
+    width: 100%;
+    right: unset;
+    left: 0;
+  }
+
+  .slider-control .control:hover { background-color: #fff; }
+  .slider-control .control:hover::before { border-color: #37053c; }
+  .input-control input:hover { opacity: .7; }
+
+  .match-details .team-summary h4:hover {
+    -webkit-animation: anime .4s linear;
+    animation: anime .4s linear;
+    -webkit-filter: drop-shadow(0 0 5px #000);
+    filter: drop-shadow(0 0 5px #000);
+  }
+
+  @-webkit-keyframes anime {
+    0%, 100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+
+    50% {
+      -webkit-transform: scale(.95);
+      transform: scale(.95);
+    }
+  }
+
+  @keyframes anime {
+    0%, 100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+
+    50% {
+      -webkit-transform: scale(.95);
+      transform: scale(.95);
+    }
+  }
+
+  .form-cards p span:hover,
+  .footer-nav-menu a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-social-list a:hover { background-color: #5c1e84; }
+
+}
+
+/*media query for max-width: 1024px starts here*/
+@media only screen and (max-width: 1024px) {
+
+  header .wrapper,
+  .epl-clubs-all .wrapper,
+  footer .wrapper {
+    padding: 12px 3%;
+  }
+
+  .about-league .wrapper,
+  .club-summary .wrapper,
+  .match-details .wrapper {
+    width: 100%;
+    padding: 40px 3%;
+  }
+
+}
+
+/*media query for max-width: 995px starts here*/
+@media only screen and (max-width: 995px) {
+
+  .banner .wrapper { height: 96vh; }
+
+}
+
+/*media query for max-width: 767px starts here*/
+@media only screen and (max-width: 767px) {
+
+  .section-heading { font-size: 26px; }
+
+  /* Header styling starts here */
+
+  header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    -webkit-box-shadow: 0 2px 10px #000;
+            box-shadow: 0 2px 10px #000;
+  }
+
+  header .wrapper {
+    gap: 25px;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+
+  header .logo {
+    width: 100px;
+    position: absolute;
+    left: 3%;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 5;
+    -webkit-box-ordinal-group: 5;
+    -ms-flex-order: 4;
+    order: 4;
+  }
+
+  nav {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: -101%;
+    z-index: 4;
+    background-color: #fff;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+  }
+
+  nav.active { left: 0; }
+
+  .nav-menu {
+    width: 100%;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .nav-menu a { font-size: 18px; }
+
+  /* Header styling ends here */
+
+/* ************************************** */
+
+  /* "index.html" styling starts here */
+
+  .about-league p { text-align: justify; }
+
+  /* "index.html" styling ends here */
+
+  /* ************************************** */
+
+  /* "clublist.html" & "matchdetails.html" styling starts here */
+
+  .club-summary .input-group,
+  .match-details .input-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .club-summary-list li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .match-date { font-size: 20px; }
+
+  .team-summary {
+    padding: 5px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  
+  .team-one-summary,
+  .team-two-summary {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  
+  .team-one-summary { 
+    border-right: none;
+    border-bottom: 2px solid #fff; 
+  }
+
+  .team-summary span {
+    padding: 5px;
+    font-size: 24px;
+  }
+  
+  /* "clublist.html" & "matchdetails.html" styling ends here */
+  
+  /* ************************************** */
+
+  /* footer styling starts here */
+
+  .footer-logo { width: 100px; }
+
+  .footer-nav-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .footer-social-list a {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+  }
+
+  /* footer styling ends here */
+
+}
+
+/*media query for max-width: 480px starts here*/
+@media only screen and (max-width: 480px) {
+
+  /* "index.html" styling starts here */
+
+  /* about-league section starts here */
+
+  .about-league .wrapper,
+  .league-info,
+  .league-history {
+    gap: 12px;
+  }
+
+  /* about-league section ends here */
+
+  /* "index.html" styling ends here */
+
+  /* ************************************** */
+
+  /* "clublist.html" & "matchdetails.html" styling starts here */
+
+  .club-summary .section-heading,
+  .match-details .section-heading {
+    text-align: center;
+  }
+
+  .match-date,
+  .team-summary h4,
+  .team-summary span {
+    font-size: 16px;
+  }
+  
+  /* "clublist.html" & "matchdetails.html" styling ends here */
+  
+  /* ************************************** */
+
+  /* "login.html" styling starts here */
+
+  .form-cards {
+    min-width: 250px;
+    width: 96%;
+  }
+
+  .login-card,
+  .signup-card {
+    padding: 10px;
+  }
+
+  .form-cards .new-user-alert,
+  .form-cards .signup-success-alert {
+    font-size: 12px;
+  }
+
+  /* "login.html" styling ends here */
+
+}
